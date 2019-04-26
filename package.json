@@ -1,0 +1,62 @@
+{
+  "name": "multer-image-transform-s3",
+  "version": "1.0.0",
+  "description": "Multer storage engine to transform and store image streams into S3",
+  "main": "index.js",
+  "repository": "git@github.com:HashRebel/multer-image-transform-s3.git",
+  "author": "Brian Henze <brian.henze@hashrebel.com>",
+  "license": "Apache-2.0",
+  "private": false,
+  "scripts": {
+    "clean": "del-cli node_modules coverage yarn-error.log",
+    "format": "prettier --config prettier.config.js \"**/*.{ts,tsx,js,jsx,md}\"",
+    "lint": "eslint **/*.js",
+    "pretest": "yarn lint",
+    "test": "yarn test:unit",
+    "test:unit": "istanbul cover ./node_modules/mocha/bin/_mocha ./tests/unit/**/*test.js ./tests/unit/*test.js --report lcovonly -- -R spec && codecov  -F istanbul_mocha",
+    "test:int": "istanbul cover ./node_modules/mocha/bin/_mocha ./tests/int/**/*test.js ./tests/int/*test.js --report lcovonly -- -R spec && codecov  -F istanbul_mocha"
+  },
+  "keywords": [
+    "multer",
+    "sharp",
+    "image",
+    "resize",
+    "imageprocessing",
+    "s3",
+    "aws",
+    "aws s3",
+    "cloud",
+    "cloud storage",
+    "form",
+    "post",
+    "multipart",
+    "form-data",
+    "formdata",
+    "express",
+    "middleware"
+  ],
+  "dependencies": {
+    "sharp": "^0.22.1"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.443.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "codecov": "^3.3.0",
+    "del-cli": "^1.1.0",
+    "dotenv": "^7.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-mocha": "^5.3.0",
+    "exif-parser": "^0.1.12",
+    "image-type": "^4.1.0",
+    "is-stream": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.1.4",
+    "prettier": "^1.17.0",
+    "read-chunk": "^3.2.0",
+    "rimraf": "^2.6.3",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0",
+    "streamifier": "^0.1.1"
+  }
+}
