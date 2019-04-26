@@ -13,8 +13,8 @@
     "lint": "eslint **/*.js",
     "pretest": "yarn lint",
     "test": "yarn test:unit",
-    "test:unit": "istanbul cover ./node_modules/mocha/bin/_mocha ./tests/unit/**/*test.js ./tests/unit/*test.js --report lcovonly -- -R spec && codecov",
-    "test:int": "istanbul cover ./node_modules/mocha/bin/_mocha ./tests/int/**/*test.js ./tests/int/*test.js --report lcovonly -- -R spec && codecov"
+    "test:unit": "istanbul cover ./node_modules/mocha/bin/_mocha ./tests/unit/**/*test.js ./tests/unit/*test.js --report lcovonly -- -R spec && codecov  -F istanbul_mocha",
+    "test:int": "istanbul cover ./node_modules/mocha/bin/_mocha ./tests/int/**/*test.js ./tests/int/*test.js --report lcovonly -- -R spec && codecov  -F istanbul_mocha"
   },
   "keywords": [
     "multer",
