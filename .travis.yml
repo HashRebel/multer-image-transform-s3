@@ -4,10 +4,7 @@ sudo: false
 node_js:
   - 11
   - 10
-  - 9
   - 8
-  - 7
-  - 6
 install:
   - yarn install
 script:
